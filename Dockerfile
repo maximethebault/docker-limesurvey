@@ -11,7 +11,7 @@ ADD limesurvey.tar.bz2 /
 RUN mv limesurvey app; \
 	chown -R www-data:www-data /app
 
-RUN chown -R www-data:www-data /uploadstruct
+RUN chown -R www-data:www-data /app/upload/
 
 RUN chown www-data:www-data /var/lib/php5
 
