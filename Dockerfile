@@ -21,6 +21,7 @@ ADD apache_default /etc/apache2/sites-available/000-default.conf
 ADD start.sh /
 
 RUN chmod +x /start.sh
+RUN chmod +w /app/upload/
 
 VOLUME /app/upload
 
