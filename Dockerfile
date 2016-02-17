@@ -4,7 +4,7 @@ FROM tutum/lamp
 RUN apt-get update ; \
 	apt-get upgrade -q -y ;\
 	apt-get install -q -y curl php5-gd php5-ldap php5-imap; apt-get clean ; \
-	php5enmod imap
+	php5dismod imap
 
 RUN rm -rf /app 
 ADD limesurvey.tar.bz2 /
