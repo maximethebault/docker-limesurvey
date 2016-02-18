@@ -17,6 +17,8 @@ ADD apache_default /etc/apache2/sites-available/000-default.conf
 
 RUN chown -R www-data:www-data /app/upload/
 RUN chmod -R u+w,g+w,o+w /app/upload/
+RUN chown -R www-data:www-data /app/tmp/
+RUN chmod -R u+w,g+w,o+w /app/tmp/
 
 VOLUME /app/upload
 
