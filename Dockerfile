@@ -14,12 +14,10 @@ RUN mv limesurvey app; \
 RUN chown www-data:www-data /var/lib/php5
 
 ADD apache_default /etc/apache2/sites-available/000-default.conf
-ADD start.sh /
 
-RUN chmod +x /start.sh
+RUN chown -R www-data:www-data /app/upload/
+RUN chmod -R u+w,g+w,o+w /app/upload/
 
 VOLUME /app/upload
 
 EXPOSE 80 3306
-CMD ["/start.sh"]
-
