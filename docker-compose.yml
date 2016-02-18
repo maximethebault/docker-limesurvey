@@ -4,5 +4,6 @@ limesurvey:
   volumes:
     - /data/limesurvey-test/mysql/data:/var/lib/mysql
     - /data/limesurvey-test/app/upload:/app/upload
+    - /data/limesurvey-test/app/application/config:/app/config
   image:
-    maximethebault/docker-limesurvey:latest
+    ls
